@@ -1,0 +1,49 @@
+* {touch-action: manipulation;}
+.canvas-wrap{ width:100%; height:100%; position:fixed; left:0; top:0; }
+
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.common {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.body-mb {
+    top: 40vh;
+    width: 70%;
+}
+
+.body-pc {
+    top: 40vh;
+    width: 40%;
+}
+
+
+.el-upload {
+    margin-top: 10px;
+}
+
+#app {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7); /* 半透明背景 */
+    backdrop-filter: blur(10px); /* 毛玻璃效果 */
+    border-radius: 10px; /* 可选：添加圆角 */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 可选：添加阴影效果 */
+}
+.slider-container {
+    margin: 20px 0;
+}
+.button {
+    margin: 10px 0;
+}
