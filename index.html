@@ -27,14 +27,13 @@
             <input type="range" id="compressionRatio" min="0" max="100" v-model="compressionRatio" @input="updateCompressionRatio">
             <span>{{ compressionRatio }}%</span>
         </div>
-
+        <div id="preview"></div>
         <el-button
             type="success"
             icon="el-icon-download"
             @click="downloadCompressedImages"
         >下载压缩图片
         </el-button>
-        <div id="preview"></div>
     </div>
 
     <script src="https://unpkg.com/vue@2.6.12/dist/vue.min.js"></script>
