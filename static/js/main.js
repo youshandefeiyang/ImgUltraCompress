@@ -61,18 +61,24 @@ new Vue({
         updatePreview() {
             const previewContainer = document.getElementById('preview');
             previewContainer.innerHTML = ''; // 清空预览容器
+            previewContainer.style.display = 'flex';
+            previewContainer.style.flexWrap = 'wrap';
+            previewContainer.style.justifyContent = 'center'; // 添加此行以居中子元素
             this.compressedImages.forEach(image => {
                 const imgElement = document.createElement('img');
                 imgElement.src = image.src;
-                imgElement.style.maxWidth = '100px';
-                imgElement.style.maxHeight = '100px';
-                imgElement.style.margin = '10px';
+                imgElement.style.maxWidth = '100%'; // 图片自适应容器宽度
+                imgElement.style.height = 'auto'; // 高度自适应以保持图片比例
 
                 const sizeInfoElement = document.createElement('div');
                 sizeInfoElement.classList.add('image-info');
                 sizeInfoElement.innerText = image.sizeInfo;
 
                 const container = document.createElement('div');
+                container.style.width = 'calc(20% - 10px)'; // 宽度为20%减去内边距
+                container.style.padding = '5px'; // 设置内边距
+                container.style.boxSizing = 'border-box'; // 边框盒模型
+
                 container.appendChild(imgElement);
                 container.appendChild(sizeInfoElement);
                 previewContainer.appendChild(container);
