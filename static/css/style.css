@@ -2,13 +2,14 @@
 .canvas-wrap{ width:100%; height:100%; position:fixed; left:0; top:0; }
 
 body {
+    overflow-y: auto;
     margin: 0;
     padding: 0;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
 }
 
 .common {
